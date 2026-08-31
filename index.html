@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVPE — Registered Finnish holding entity</title>
+<meta name="description" content="CVPE is a Finland-registered holding and innovation hatchery, domiciled in Lohja. Business ID 3651473-2.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://cvpe.dev/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="CVPE">
+<meta name="theme-color" content="#0a0f1a">
+<meta name="color-scheme" content="dark light">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CVPE — Registered Finnish holding entity">
+<meta property="og:description" content="CVPE is a Finland-registered holding and innovation hatchery, domiciled in Lohja. Business ID 3651473-2.">
+<meta property="og:url" content="https://cvpe.dev/">
+<meta property="og:site_name" content="CVPE">
+<meta property="og:image" content="https://cvpe.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CVPE — Holding and innovation hatchery, registered in Finland.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CVPE — Registered Finnish holding entity">
+<meta name="twitter:description" content="CVPE is a Finland-registered holding and innovation hatchery, domiciled in Lohja. Business ID 3651473-2.">
+<meta name="twitter:image" content="https://cvpe.dev/og.png">
+<meta name="twitter:image:alt" content="CVPE — Holding and innovation hatchery, registered in Finland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:        #0a0f1a;
+    --surface:    #101827;
+    --surface-2:  #16213a;
+    --hair:       rgba(237,239,243,0.12);
+    --hair-soft:  rgba(237,239,243,0.07);
+    --paper:      #f3f5f1;
+    --paper-dim:  #e7eae4;
+    --text-hi:    #edeff3;
+    --text-mid:   rgba(237,239,243,0.68);
+    --text-low:   rgba(237,239,243,0.44);
+    --ink-text:   #10151f;
+    --ink-text-mid: rgba(16,21,31,0.62);
+    --blue:  #5b8def;
+    --teal:  #7ce0c4;
+    --violet:#b39dff;
+    --radius: 3px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--ink);
+    color:var(--text-hi);
+    font-family:'Inter', system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', system-ui, sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit;}
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(10,15,26,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--hair-soft);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 32px;
+    max-width:1120px; margin:0 auto;
+  }
+  .logo{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:1.15rem;
+    display:flex; align-items:center; gap:10px;
+  }
+  .logo-mark{
+    width:20px; height:20px; position:relative; flex:none;
+  }
+  .logo-mark svg{width:100%; height:100%; display:block;}
+  .nav-links{
+    display:flex; gap:36px; font-size:0.92rem; color:var(--text-mid);
+  }
+  .nav-links a{text-decoration:none; transition:color .15s ease;}
+  .nav-links a:hover, .nav-links a:focus-visible{color:var(--text-hi);}
+  .nav-cta{
+    font-size:0.88rem;
+    color:var(--text-hi);
+    border:1px solid var(--hair);
+    padding:9px 16px;
+    border-radius:999px;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .nav-cta:hover, .nav-cta:focus-visible{border-color:rgba(124,224,196,0.6); background:rgba(124,224,196,0.06);}
+
+  @media (max-width:720px){
+    .nav-links{display:none;}
+    .nav-inner{padding:18px 20px;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:110px 0 120px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero-field{
+    position:absolute; inset:-10% -10% -10% -10%;
+    z-index:-2;
+    background:
+      radial-gradient(60% 55% at 78% 18%, rgba(91,141,239,0.30), transparent 60%),
+      radial-gradient(50% 45% at 92% 55%, rgba(124,224,196,0.20), transparent 65%),
+      radial-gradient(40% 40% at 60% 85%, rgba(179,157,255,0.14), transparent 70%);
+  }
+  .hero-noise{
+    position:absolute; inset:0; z-index:-1;
+    background-image:linear-gradient(180deg, transparent 0%, var(--ink) 96%);
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:48px;
+    align-items:center;
+  }
+  .eyebrow-line{
+    display:flex; align-items:center; gap:10px;
+    font-size:0.88rem; color:var(--text-mid);
+    margin-bottom:28px;
+  }
+  .eyebrow-dot{
+    width:7px; height:7px; border-radius:50%;
+    background:linear-gradient(135deg, var(--teal), var(--blue));
+    flex:none;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    line-height:1.08;
+    max-width:14ch;
+    color:var(--text-hi);
+  }
+  .hero-sub{
+    margin-top:24px;
+    max-width:44ch;
+    color:var(--text-mid);
+    font-size:1.06rem;
+  }
+  .hero-actions{
+    margin-top:38px;
+    display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+  }
+  .btn-primary{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    color:var(--ink);
+    background:linear-gradient(120deg, var(--teal), var(--blue));
+    padding:14px 26px;
+    border-radius:999px;
+    text-decoration:none;
+    display:inline-block;
+    transition:filter .15s ease, transform .15s ease;
+  }
+  .btn-primary:hover, .btn-primary:focus-visible{filter:brightness(1.08); transform:translateY(-1px);}
+  .btn-secondary{
+    font-size:0.92rem; color:var(--text-mid); text-decoration:none;
+    border-bottom:1px solid var(--hair);
+    padding-bottom:2px;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .btn-secondary:hover, .btn-secondary:focus-visible{color:var(--text-hi); border-color:var(--text-mid);}
+
+  .hero-diagram{
+    position:relative;
+    aspect-ratio:1/1;
+    max-width:420px;
+    justify-self:end;
+  }
+  .hero-diagram svg{width:100%; height:100%; display:block;}
+  .node{transform-origin:center;}
+  @media (prefers-reduced-motion: no-preference){
+    .node-drift{ animation:drift 9s ease-in-out infinite; }
+    .node-drift-2{ animation:drift 11s ease-in-out infinite reverse; }
+    .node-drift-3{ animation:drift 7.5s ease-in-out infinite; }
+    .pulse-line{ animation:pulseLine 4.5s ease-in-out infinite; }
+  }
+  @keyframes drift{
+    0%,100%{ transform:translate(0,0); }
+    50%{ transform:translate(3px,-6px); }
+  }
+  @keyframes pulseLine{
+    0%,100%{ stroke-opacity:0.35; }
+    50%{ stroke-opacity:0.85; }
+  }
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr; gap:56px;}
+    .hero-diagram{max-width:280px; justify-self:start;}
+    .hero{padding:76px 0 88px;}
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{
+    background:var(--paper);
+    color:var(--ink-text);
+    padding:104px 0;
+  }
+  .about .wrap{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .section-label{
+    font-size:0.88rem;
+    color:var(--ink-text-mid);
+    font-family:'Space Grotesk', sans-serif;
+  }
+  .about h2{
+    font-size:clamp(1.7rem, 3vw, 2.15rem);
+    color:var(--ink-text);
+    margin-top:10px;
+    max-width:12ch;
+  }
+  .about-copy p{
+    max-width:58ch;
+    color:var(--ink-text-mid);
+    font-size:1.03rem;
+  }
+  .about-copy p + p{margin-top:20px;}
+
+  @media (max-width:860px){
+    .about .wrap{grid-template-columns:1fr; gap:28px;}
+    .about{padding:76px 0;}
+  }
+
+  /* ---------- PRINCIPLES ---------- */
+  .principles{
+    background:var(--paper);
+    color:var(--ink-text);
+    padding-bottom:104px;
+  }
+  .principles .wrap{
+    border-top:1px solid rgba(16,21,31,0.12);
+  }
+  .p-row{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    padding:38px 0;
+    border-bottom:1px solid rgba(16,21,31,0.12);
+  }
+  .p-row h3{
+    font-size:1.15rem;
+    color:var(--ink-text);
+  }
+  .p-row p{
+    color:var(--ink-text-mid);
+    max-width:56ch;
+    margin-top:8px;
+  }
+  .p-icon{
+    width:22px; height:22px;
+    margin-bottom:14px;
+  }
+
+  @media (max-width:860px){
+    .p-row{grid-template-columns:1fr; gap:14px;}
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .projects{
+    background:var(--paper);
+    color:var(--ink-text);
+    padding-bottom:104px;
+  }
+  .projects .wrap{
+    border-top:1px solid rgba(16,21,31,0.12);
+  }
+  .proj-row{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    padding:44px 0;
+    border-bottom:1px solid rgba(16,21,31,0.12);
+  }
+  .proj-name{
+    font-size:1.15rem;
+    color:var(--ink-text);
+    margin-bottom:6px;
+  }
+  .proj-domain{
+    font-size:0.86rem;
+    color:var(--ink-text-mid);
+  }
+  .proj-body p{
+    color:var(--ink-text-mid);
+    max-width:60ch;
+  }
+  .proj-link{
+    display:inline-flex; align-items:center; gap:7px;
+    margin-top:16px;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600; font-size:0.9rem;
+    color:var(--ink-text);
+    text-decoration:none;
+    border-bottom:1px solid rgba(16,21,31,0.3);
+    padding-bottom:2px;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .proj-link:hover, .proj-link:focus-visible{color:var(--blue); border-color:var(--blue);}
+  .proj-entity{
+    display:block;
+    margin-top:16px;
+    font-size:0.82rem;
+    color:var(--ink-text-mid);
+  }
+
+  @media (max-width:860px){
+    .proj-row{grid-template-columns:1fr; gap:16px; padding:34px 0;}
+  }
+
+  /* ---------- TECH SUPPORT (external) ---------- */
+  .techsupport{
+    background:var(--ink);
+    padding:100px 0 110px;
+    border-top:1px solid var(--hair-soft);
+  }
+  .techsupport .wrap > .section-intro{
+    max-width:52ch;
+    margin-bottom:44px;
+  }
+  .techsupport .section-label{color:var(--text-low);}
+  .techsupport h2{
+    color:var(--text-hi);
+    font-size:clamp(1.5rem, 2.6vw, 1.9rem);
+    margin-top:10px;
+  }
+  .techsupport .section-intro p{
+    color:var(--text-mid);
+    margin-top:14px;
+  }
+  .tech-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--hair-soft);
+    border:1px solid var(--hair-soft);
+  }
+  .tech-card{
+    background:var(--ink);
+    padding:36px;
+  }
+  .tech-card h3{
+    color:var(--text-hi);
+    font-size:1.05rem;
+    margin-bottom:4px;
+  }
+  .tech-domain{
+    font-size:0.85rem; color:var(--text-low);
+    margin-bottom:16px;
+  }
+  .tech-card p{
+    color:var(--text-mid);
+    font-size:0.96rem;
+  }
+  .tech-link{
+    display:inline-flex; align-items:center; gap:7px;
+    margin-top:18px;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600; font-size:0.88rem;
+    color:var(--text-hi);
+    text-decoration:none;
+    border-bottom:1px solid rgba(237,239,243,0.3);
+    padding-bottom:2px;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .tech-link:hover, .tech-link:focus-visible{color:var(--teal); border-color:var(--teal);}
+
+  @media (max-width:720px){
+    .tech-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- LEGAL PLAQUE ---------- */
+  .legal{
+    background:var(--ink);
+    padding:110px 0;
+    position:relative;
+  }
+  .plaque{
+    max-width:640px;
+    margin:0 auto;
+    border:1px solid var(--hair);
+    border-radius:6px;
+    padding:52px 48px;
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+    position:relative;
+    overflow:hidden;
+  }
+  .plaque::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, var(--teal), var(--blue), var(--violet));
+  }
+  .plaque-eyebrow{
+    font-size:0.82rem; color:var(--text-low);
+    font-family:'Space Grotesk', sans-serif;
+    margin-bottom:22px;
+  }
+  .plaque h2{
+    font-size:1.7rem; color:var(--text-hi); margin-bottom:26px;
+  }
+  .plaque-grid{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    row-gap:16px; column-gap:24px;
+    font-size:0.96rem;
+  }
+  .plaque-grid dt{color:var(--text-low); white-space:nowrap;}
+  .plaque-grid dd{color:var(--text-hi);}
+  .plaque-verify{
+    margin-top:34px;
+    padding-top:30px;
+    border-top:1px solid var(--hair-soft);
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    flex-wrap:wrap;
+  }
+  .plaque-verify p{font-size:0.88rem; color:var(--text-low); max-width:32ch;}
+  .verify-link{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600; font-size:0.92rem;
+    color:var(--text-hi);
+    text-decoration:none;
+    display:inline-flex; align-items:center; gap:8px;
+    border-bottom:1px solid rgba(237,239,243,0.3);
+    padding-bottom:3px;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .verify-link:hover, .verify-link:focus-visible{color:var(--teal); border-color:var(--teal);}
+
+  @media (max-width:600px){
+    .plaque{padding:38px 26px;}
+    .plaque-grid{grid-template-columns:1fr; row-gap:14px;}
+    .plaque-grid dt{margin-bottom:2px;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    border-top:1px solid var(--hair-soft);
+    padding:44px 0 48px;
+  }
+  .footer-inner{
+    display:flex; align-items:flex-start; justify-content:space-between;
+    gap:24px; flex-wrap:wrap;
+  }
+  .footer-left{font-size:0.86rem; color:var(--text-low);}
+  .footer-left .fname{color:var(--text-mid); font-family:'Space Grotesk', sans-serif; margin-bottom:6px;}
+  .footer-right{
+    display:flex; gap:28px; font-size:0.86rem; color:var(--text-low);
+  }
+  .footer-right a{text-decoration:none; transition:color .15s ease;}
+  .footer-right a:hover, .footer-right a:focus-visible{color:var(--text-mid);}
+
+  :focus-visible{outline:2px solid var(--teal); outline-offset:2px;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cvpe.dev/#organization",
+      "name": "CVPE",
+      "alternateName": "CVPE — Finnish legal entity",
+      "description": "CVPE is a Finland-registered holding and innovation hatchery, domiciled in Lohja. Business ID 3651473-2.",
+      "url": "https://cvpe.dev/",
+      "logo": "https://cvpe.dev/favicon.svg",
+      "identifier": "3651473-2",
+      "sameAs": "https://tietopalvelu.ytj.fi/yritys/3651473-2",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FI",
+        "addressLocality": "Lohja"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cvpe.dev/#website",
+      "name": "CVPE",
+      "description": "CVPE is a Finland-registered holding and innovation hatchery, domiciled in Lohja. Business ID 3651473-2.",
+      "url": "https://cvpe.dev/",
+      "publisher": { "@id": "https://cvpe.dev/#organization" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="10" r="3" fill="url(#navGrad)"/>
+          <circle cx="15" cy="5" r="1.6" fill="url(#navGrad)"/>
+          <circle cx="15" cy="15" r="1.6" fill="url(#navGrad)"/>
+          <line x1="8.4" y1="9" x2="13.6" y2="5.8" stroke="url(#navGrad)" stroke-width="0.7"/>
+          <line x1="8.4" y1="11" x2="13.6" y2="14.2" stroke="url(#navGrad)" stroke-width="0.7"/>
+          <defs>
+            <linearGradient id="navGrad" x1="0" y1="0" x2="20" y2="20">
+              <stop offset="0" stop-color="#7ce0c4"/>
+              <stop offset="1" stop-color="#5b8def"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      CVPE
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#principles">How we operate</a>
+      <a href="#legal">Registration</a>
+    </nav>
+    <a class="nav-cta" href="#projects">View our projects</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-field"></div>
+  <div class="hero-noise"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow-line">
+        <span class="eyebrow-dot"></span>
+        Registered in Finland · Business ID 3651473-2
+      </div>
+      <h1>A structured home for ventures worth building properly.</h1>
+      <p class="hero-sub">CVPE is a holding and innovation hatchery. We give early-stage ideas the legal, financial, and operational structure of an established company, from day one.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#projects">View our projects</a>
+        <a class="btn-secondary" href="#legal">Verify our registration</a>
+      </div>
+    </div>
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="400" y2="400">
+            <stop offset="0" stop-color="#7ce0c4"/>
+            <stop offset="0.5" stop-color="#5b8def"/>
+            <stop offset="1" stop-color="#b39dff"/>
+          </linearGradient>
+          <radialGradient id="coreGrad" cx="0.35" cy="0.35" r="0.8">
+            <stop offset="0" stop-color="#7ce0c4"/>
+            <stop offset="1" stop-color="#5b8def"/>
+          </radialGradient>
+        </defs>
+        <line class="pulse-line" x1="200" y1="200" x2="90" y2="110" stroke="url(#lineGrad)" stroke-width="1"/>
+        <line class="pulse-line" x1="200" y1="200" x2="320" y2="90" stroke="url(#lineGrad)" stroke-width="1"/>
+        <line class="pulse-line" x1="200" y1="200" x2="330" y2="230" stroke="url(#lineGrad)" stroke-width="1"/>
+        <line class="pulse-line" x1="200" y1="200" x2="250" y2="330" stroke="url(#lineGrad)" stroke-width="1"/>
+        <line class="pulse-line" x1="200" y1="200" x2="100" y2="290" stroke="url(#lineGrad)" stroke-width="1"/>
+        <circle class="node node-drift" cx="200" cy="200" r="30" fill="url(#coreGrad)" fill-opacity="0.9"/>
+        <circle class="node node-drift-2" cx="90" cy="110" r="9" fill="#7ce0c4" fill-opacity="0.85"/>
+        <circle class="node node-drift-3" cx="320" cy="90" r="7" fill="#5b8def" fill-opacity="0.8"/>
+        <circle class="node node-drift" cx="330" cy="230" r="8" fill="#b39dff" fill-opacity="0.8"/>
+        <circle class="node node-drift-2" cx="250" cy="330" r="10" fill="#5b8def" fill-opacity="0.75"/>
+        <circle class="node node-drift-3" cx="100" cy="290" r="6" fill="#7ce0c4" fill-opacity="0.75"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <div class="section-label">About the entity</div>
+      <h2>One legal structure. Many ventures.</h2>
+    </div>
+    <div class="about-copy">
+      <p>CVPE is a Finland-registered holding and innovation hatchery. Rather than operating a single business, we identify, structure, and manage a portfolio of independent ventures under one legal entity — providing the governance, capital allocation, and operational discipline each project needs to grow, without requiring every new idea to incorporate on its own from day one.</p>
+      <p>Where a conventional holding company sits above already-finished businesses, CVPE gets involved earlier: testing concepts under controlled conditions, and either spinning successful ones out as independent companies or continuing to hold and steward them long-term. The entity itself is domiciled in Lohja, Finland, and operates under Finnish corporate law, with registration that any partner, supplier, or institution can independently verify through the Finnish Patent and Registration Office's business information system.</p>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="proj-row">
+      <div>
+        <div class="section-label">Portfolio</div>
+      </div>
+      <div>
+        <div class="proj-name">Marita Universe</div>
+        <div class="proj-domain">marita-universe.com</div>
+      </div>
+    </div>
+    <div class="proj-row">
+      <div></div>
+      <div class="proj-body">
+        <p>Marita is a deterministic, physics-first space simulation where players don't fly ships directly — they write the software that flies them. Built on real Newtonian mechanics, light-speed-delayed sensor data, and an AI-run in-world economy, it's designed as a demanding sandbox for autonomous agents as much as a game, currently in a pre-Beta cohort with an open reference client on GitHub.</p>
+        <a class="proj-link" href="https://marita-universe.com/" target="_blank" rel="noopener">Visit marita-universe.com ↗</a>
+        <span class="proj-entity">Operated under CVPE · Business ID 3651473-2</span>
+      </div>
+    </div>
+    <div class="proj-row">
+      <div></div>
+      <div class="proj-body">
+        <div class="proj-name" style="margin-bottom:6px;">Kotitoimitus.com</div>
+        <p>Kotitoimitus.com is a B2B compliance and logistics service preparing Finnish and EU retailers, importers, and delivery operators for the home delivery and remote sale of alcohol under Finland's amended Alcohol Act. It handles the practical mechanics of compliance — delivery permits, delivery passes, age verification at purchase and handover, and cross-border remote sales support — so operators can launch within the law rather than around it.</p>
+        <a class="proj-link" href="https://kotitoimitus.com/" target="_blank" rel="noopener">Visit kotitoimitus.com ↗</a>
+        <span class="proj-entity">Operated under CVPE · Business ID 3651473-2</span>
+      </div>
+    </div>
+    <div class="proj-row">
+      <div></div>
+      <div class="proj-body">
+        <div class="proj-name" style="margin-bottom:6px;">Kotikreikasta.com</div>
+        <p>Kotikreikasta.com is a Finnish-language real estate service that helps Finns buy property in Greece, guiding the full process from initial search through notarised signing, with area guides covering regions such as Crete, Corfu, and the Peloponnese. It backs each sale with a year of concierge support after closing, aimed at removing the friction — language, legal process, an unfamiliar market — that typically makes a cross-border property purchase feel riskier than it needs to be.</p>
+        <a class="proj-link" href="https://kotikreikasta.com/" target="_blank" rel="noopener">Visit kotikreikasta.com ↗</a>
+        <span class="proj-entity">Operated under CVPE · Business ID 3651473-2</span>
+      </div>
+    </div>
+    <div class="proj-row">
+      <div></div>
+      <div class="proj-body">
+        <div class="proj-name" style="margin-bottom:6px;">Old Continent Atelier</div>
+        <p>Old Continent Atelier is a handcrafted leather goods brand producing handbags, laptop bags, and beauty cases from full-grain, vegetable-tanned European leather, saddle-stitched by named artisans in named workshops across Europe. Its structure is provenance itself: every piece ships with the specific tannery and maker behind it, rather than a generic "made in Europe" label. The collection ships across Europe.</p>
+        <a class="proj-link" href="https://ocatelier.com/" target="_blank" rel="noopener">Visit ocatelier.com ↗</a>
+        <span class="proj-entity">Operated under CVPE · Business ID 3651473-2</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="principles" id="principles">
+  <div class="wrap">
+    <div class="p-row">
+      <div>
+        <div class="section-label">How we operate</div>
+      </div>
+      <div>
+        <h3>Governance first</h3>
+        <p>Every venture under CVPE operates against a shared standard of financial reporting, contractual discipline, and legal accountability — set at the holding level and enforced consistently underneath it.</p>
+      </div>
+    </div>
+    <div class="p-row">
+      <div></div>
+      <div>
+        <h3>Capital with intent</h3>
+        <p>Resources are allocated deliberately across the portfolio, based on the stage and risk profile of each venture, rather than distributed evenly or reactively.</p>
+      </div>
+    </div>
+    <div class="p-row">
+      <div></div>
+      <div>
+        <h3>Built to last, or built to leave</h3>
+        <p>Some ventures are designed to be spun out as independent companies once they're ready. Others remain under CVPE for the long term. Either path is planned for from the start, not decided under pressure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="techsupport" id="techsupport">
+  <div class="wrap">
+    <div class="section-intro">
+      <div class="section-label">Technology support</div>
+      <h2>Also built with our support, held elsewhere.</h2>
+      <p>CVPE contributes technology to a small number of projects outside its own portfolio — built or supported by us, but owned and managed by other legal entities.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h3>Title.Stream</h3>
+        <div class="tech-domain">title.stream</div>
+        <p>Title.Stream lets sports federations enter championship results once and have them declared officially across social platforms under the federation's own authority, turning a manual announcement process into a single authoritative declaration. It operates under NxtStride Finland Oy.</p>
+        <a class="tech-link" href="https://title.stream/" target="_blank" rel="noopener">Visit title.stream ↗</a>
+      </div>
+      <div class="tech-card">
+        <h3>Sports-Veritas</h3>
+        <div class="tech-domain">sports-veritas.com</div>
+        <p>Sports-Veritas is an editorial platform covering championship results across the practitioner tiers of IOC-recognised sports — federations, disciplines, and athletes that rarely receive dedicated coverage elsewhere. It also operates under NxtStride Finland Oy.</p>
+        <a class="tech-link" href="https://sports-veritas.com/" target="_blank" rel="noopener">Visit sports-veritas.com ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="legal" id="legal">
+  <div class="wrap">
+    <div class="plaque">
+      <div class="plaque-eyebrow">Registered entity</div>
+      <h2>CVPE — Finnish legal entity</h2>
+      <dl class="plaque-grid">
+        <dt>Business ID</dt>
+        <dd>3651473-2</dd>
+        <dt>Domicile</dt>
+        <dd>Lohja, Finland</dd>
+        <dt>Jurisdiction</dt>
+        <dd>Republic of Finland</dd>
+        <dt>Registry</dt>
+        <dd>Finnish Patent and Registration Office (PRH)</dd>
+      </dl>
+      <div class="plaque-verify">
+        <p>Confirm our registration status directly with Finland's official business information system. Every project above operates under this entity.</p>
+        <a class="verify-link" href="https://tietopalvelu.ytj.fi/yritys/3651473-2" target="_blank" rel="noopener noreferrer">
+          View on YTJ ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-left">
+      <div class="fname">CVPE</div>
+      Lohja, Finland · Business ID 3651473-2
+    </div>
+    <div class="footer-right">
+      <a href="https://tietopalvelu.ytj.fi/yritys/3651473-2" target="_blank" rel="noopener noreferrer">Registration record</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#principles">Operations</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
