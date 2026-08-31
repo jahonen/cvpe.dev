@@ -26,6 +26,8 @@ wrangler pages deploy .
 - Meta description, Open Graph, and Twitter Card tags are in `index.html`.
 - `og.png` (1200×630) is the social preview image.
 - `favicon.svg` is the high-contrast favicon.
+- `sitemap.xml` lists the canonical page for search engines.
+- `robots.txt` allows all crawlers and points to the sitemap.
 - JSON-LD structured data for `Organization` and `WebSite` is included in `index.html`.
 
 ## IndexNow / search-engine indexing
@@ -55,4 +57,6 @@ A successful submission returns HTTP `202 Accepted`. The search engine verifies 
 - `favicon.svg` — favicon
 - `wrangler.toml` — Cloudflare Pages output configuration
 - `_headers` — security and cache headers
+- `robots.txt` — crawler access rules
+- `sitemap.xml` — sitemap for search engines
 - `c35db314cf66eaaad8f38cd4cd51fb12.txt` — IndexNow ownership key
